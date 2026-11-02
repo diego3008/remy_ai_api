@@ -43,12 +43,12 @@ async def telegram_webhook(request: Request):
         )
 
         agent_response = await run_agent(msg)
-        formatted_text = agent_response.replace("**", "*")
+        #formatted_text = agent_response.replace("**", "*")
 
         if agent_response:
             await ptb.bot.send_message(
                 chat_id=msg.chat_id,
-                text=formatted_text,
+                text=agent_response,
                 parse_mode=ParseMode.MARKDOWN,
             )
 
