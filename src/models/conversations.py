@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column
-from src.models import Base
+from src.models.base import Base
 
 
 class Conversations(Base):
