@@ -5,7 +5,8 @@ from fastapi import FastAPI
 from telegram import Update
 from telegram.error import RetryAfter
 from telegram.ext import Application
-from src.api import telegram_router
+
+from src.api import api_router, telegram_router
 from src.config import get_settings
 from src.db import get_engine
 
@@ -64,6 +65,7 @@ app = FastAPI(
 )
 
 app.include_router(telegram_router)
+app.include_router(api_router)
 
 
 @app.get("/health", tags=["Health"])
