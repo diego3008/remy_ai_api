@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     LANGGRAPH_API_URL: str
     LANGGRAPH_API_KEY: str = ""
-    LANGGRAPH_ASSISTANT_ID: str = "agent"
+    LANGGRAPH_ASSISTANT_ID: str = "main_graph"
 
     DB_USER: str
     DB_PASSWORD: str
